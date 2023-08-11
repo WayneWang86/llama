@@ -30,8 +30,8 @@ def main(
     right = os.environ.get('RIGHT')
     
     df = pd.read_csv("./data/question_categories.csv")
-    # questions = df["question"][int(left):int(right)]
-    questions = df["question"][159:160]
+    questions = df["questions"][int(left):int(right)]
+    # questions = df["questions"][159:160]
     dialogs= [[{"role": "user", "content": q}] for q in questions]
     
     # print(dialogs)

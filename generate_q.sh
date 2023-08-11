@@ -8,8 +8,8 @@ command="torchrun --nproc_per_node 1 qa_pipeline.py \
 
 
 # Define array argument
-left=0
-right=3
+left=856
+right=856
 n=1524
 
 while [ "$left" -lt "$n" ]; do
