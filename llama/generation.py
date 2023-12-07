@@ -158,9 +158,15 @@ class Llama:
         params = self.model.params
         bsz = len(prompt_tokens)
         assert bsz <= params.max_batch_size, (bsz, params.max_batch_size)
+        
+        # prompt_tokens = [t[:3000] if len(t) > 3000 else t for t in prompt_tokens]
 
         min_prompt_len = min(len(t) for t in prompt_tokens)
         max_prompt_len = max(len(t) for t in prompt_tokens)
+        
+    
+        print(max_prompt_len)
+        
         assert max_prompt_len <= params.max_seq_len
         total_len = min(params.max_seq_len, max_gen_len + max_prompt_len)
 
