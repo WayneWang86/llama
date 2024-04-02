@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Define the command to be executed in the loop
-command="torchrun --nproc_per_node 1 clinical_report_pipeline.py \
-    --ckpt_dir llama-2-7b-chat/ \
-    --tokenizer_path tokenizer.model \
+command="torchrun --nproc_per_node 1 process_prompt.py \
+    --ckpt_dir /home/yifengw2/llama-2/llama/llama-2-7b-chat/ \
+    --tokenizer_path /home/yifengw2/llama-2/llama/tokenizer.model \
     --max_seq_len 4096 --max_batch_size 4"
 
 
